@@ -1,0 +1,12 @@
+{
+    "model_type": "clothing",
+    "description": "Configuration to fetch major clothing retailers from OpenStreetMap via Overpass API.",
+    "search_criteria": {
+        "bbox": [28.5, 40.8, 29.5, 41.2],
+        "tags": [
+            { "shop": "clothes", "name~": "Zara|H&M|Mango|Pull&Bear|Stradivarius|Defacto|LCWaikiki|Mavi" },
+            { "shop": "shoes", "name~": "Flo|Deichmann|Sportive" },
+            { "shop": "shoes", "brand~": "Nike|Adidas|Puma" }
+        ]
+    }
+}

@@ -1,0 +1,789 @@
+[
+    {
+        "osm_id": 2530817401,
+        "name": "Zara",
+        "lat": 41.0264931,
+        "lon": 29.1272907,
+        "tags": {
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "brand:wikipedia": "en:Zara (retailer)",
+            "name": "Zara",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 2547264055,
+        "name": "Mavi",
+        "lat": 41.0337504,
+        "lon": 28.9780882,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes",
+            "wheelchair": "no"
+        }
+    },
+    {
+        "osm_id": 4053855698,
+        "name": "Mango",
+        "lat": 41.0761948,
+        "lon": 29.0127431,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "name": "Mango",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4179343092,
+        "name": "Zara",
+        "lat": 40.9590444,
+        "lon": 29.0827103,
+        "tags": {
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "brand:wikipedia": "en:Zara (retailer)",
+            "name": "Zara",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4483813490,
+        "name": "Zara",
+        "lat": 41.0505666,
+        "lon": 28.9925951,
+        "tags": {
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "name": "Zara",
+            "opening_hours": "Mo-Su 10:00-22:00",
+            "shop": "clothes",
+            "website": "https://www.vakko.com/"
+        }
+    },
+    {
+        "osm_id": 4573733772,
+        "name": "Mavi",
+        "lat": 40.9644504,
+        "lon": 29.0727247,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4580119999,
+        "name": "Mango",
+        "lat": 41.0784398,
+        "lon": 29.0118249,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "name": "Mango",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4580164147,
+        "name": "Mavi",
+        "lat": 41.0772262,
+        "lon": 29.010841,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4580167245,
+        "name": "Deichmann",
+        "lat": 41.0775817,
+        "lon": 29.0117923,
+        "tags": {
+            "brand": "Deichmann",
+            "brand:wikidata": "Q664543",
+            "brand:wikipedia": "en:Deichmann SE",
+            "name": "Deichmann",
+            "shop": "shoes"
+        }
+    },
+    {
+        "osm_id": 4580246874,
+        "name": "H&M",
+        "lat": 41.0773722,
+        "lon": 29.0121561,
+        "tags": {
+            "brand": "H&M",
+            "brand:wikidata": "Q188326",
+            "brand:wikipedia": "en:H&M",
+            "name": "H&M",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4580255174,
+        "name": "Mango",
+        "lat": 41.0774086,
+        "lon": 29.0106327,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "name": "Mango",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4582621593,
+        "name": "Mavi",
+        "lat": 41.0928676,
+        "lon": 29.0864329,
+        "tags": {
+            "addr:housenumber": "2C",
+            "addr:street": "Fatih Sultan Mehmet Cd.",
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 4744500423,
+        "name": "H&M",
+        "lat": 41.0350332,
+        "lon": 28.9812891,
+        "tags": {
+            "brand": "H&M",
+            "brand:wikidata": "Q188326",
+            "brand:wikipedia": "en:H&M",
+            "name": "H&M",
+            "name:en": "H&M",
+            "shop": "clothes",
+            "wheelchair": "no"
+        }
+    },
+    {
+        "osm_id": 4744505422,
+        "name": "Mango",
+        "lat": 41.0351178,
+        "lon": 28.9814982,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "name": "Mango",
+            "name:en": "Mango",
+            "shop": "clothes",
+            "wheelchair": "yes"
+        }
+    },
+    {
+        "osm_id": 5113128074,
+        "name": "Flower",
+        "lat": 41.0093708,
+        "lon": 28.9560785,
+        "tags": {
+            "addr:city": "Istanbul",
+            "addr:district": "Fatih",
+            "addr:street": "Ordu Caddesi",
+            "name": "Flower",
+            "shop": "shoes"
+        }
+    },
+    {
+        "osm_id": 5302505209,
+        "name": "Mavi",
+        "lat": 40.8760406,
+        "lon": 29.2328269,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Pendik",
+            "addr:housenumber": "61",
+            "addr:neighbourhood": "Bat\u0131 Mahallesi",
+            "addr:street": "19 May\u0131s Caddesi",
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "opening_hours": "Mo-Su 10:00-21:00",
+            "payment:cash": "yes",
+            "payment:credit_cards": "yes",
+            "payment:debit_cards": "yes",
+            "phone": "+90 216 265 1010",
+            "shop": "clothes",
+            "website": "https://www.mavi.com"
+        }
+    },
+    {
+        "osm_id": 5466133909,
+        "name": "H&M",
+        "lat": 41.0471875,
+        "lon": 28.8968351,
+        "tags": {
+            "brand": "H&M",
+            "brand:wikidata": "Q188326",
+            "brand:wikipedia": "en:H&M",
+            "name": "H&M",
+            "opening_hours": "Mo-Su 10:00-22:00",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 5466133910,
+        "name": "Zara",
+        "lat": 41.0472059,
+        "lon": 28.8965363,
+        "tags": {
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "brand:wikipedia": "en:Zara (retailer)",
+            "name": "Zara",
+            "opening_hours": "Mo-Su 10:00-22:00",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 5482089521,
+        "name": "Mavi",
+        "lat": 41.0665482,
+        "lon": 29.01675,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "opening_hours": "Mo-Su,PH 10:00-22:00",
+            "phone": "2123536231",
+            "shop": "clothes",
+            "wheelchair": "yes"
+        }
+    },
+    {
+        "osm_id": 5542887095,
+        "name": "Mor Mavi",
+        "lat": 40.9683181,
+        "lon": 29.2615955,
+        "tags": {
+            "addr:city": "Istanbul",
+            "addr:district": "Sultanbeyli",
+            "addr:street": "Fatih Bulvar\u0131 Caddesi",
+            "name": "Mor Mavi",
+            "name:ar": "\u0627\u0644\u0628\u0633\u0629 \u0645\u0648\u0631 \u0645\u0627\u0641\u064a",
+            "opening_hours": "Mo-Fr 07:00-13:30; Mo-Fr 17:00-20:00",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 5558958203,
+        "name": "Deichmann",
+        "lat": 41.0478232,
+        "lon": 28.8972399,
+        "tags": {
+            "brand": "Deichmann",
+            "brand:wikidata": "Q664543",
+            "brand:wikipedia": "en:Deichmann SE",
+            "name": "Deichmann",
+            "opening_hours": "Mo-Su 10:00-22:00",
+            "shop": "shoes"
+        }
+    },
+    {
+        "osm_id": 5710048321,
+        "name": "Zara",
+        "lat": 41.0329735,
+        "lon": 28.976752,
+        "tags": {
+            "addr:housenumber": "161",
+            "addr:street": "\u0130stiklal Caddesi",
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "brand:wikipedia": "en:Zara (retailer)",
+            "check_date": "2024-11-15",
+            "level": "0",
+            "name": "Zara",
+            "shop": "clothes",
+            "toilets": "yes",
+            "wheelchair": "limited",
+            "wheelchair:description": "accessable",
+            "wheelchair:entrance_width": "standard",
+            "wheelchair:step_height": "standard"
+        }
+    },
+    {
+        "osm_id": 5985161314,
+        "name": "Mavi",
+        "lat": 41.0473726,
+        "lon": 28.8966311,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 6115742787,
+        "name": "Mango",
+        "lat": 40.9601053,
+        "lon": 29.0805482,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Kad\u0131k\u00f6y",
+            "addr:housenumber": "414",
+            "addr:neighbourhood": "Suadiye Mahallesi",
+            "addr:postcode": "34740",
+            "addr:street": "Ba\u011fdat Caddesi",
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "name": "Mango",
+            "opening_hours": "12:00 - 20:00",
+            "shop": "clothes",
+            "website": "https://shop.mango.com/tr"
+        }
+    },
+    {
+        "osm_id": 6115765785,
+        "name": "H&M",
+        "lat": 40.9603999,
+        "lon": 29.0809912,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Kad\u0131k\u00f6y",
+            "addr:housenumber": "423",
+            "addr:neighbourhood": "Suadiye Mahallesi",
+            "addr:postcode": "34740",
+            "addr:street": "Ba\u011fdat Caddesi",
+            "brand": "H&M",
+            "brand:wikidata": "Q188326",
+            "brand:wikipedia": "en:H&M",
+            "name": "H&M",
+            "name:tr": "H&M",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 6157462788,
+        "name": "H&M",
+        "lat": 41.020955,
+        "lon": 29.0398861,
+        "tags": {
+            "brand": "H&M",
+            "brand:wikidata": "Q188326",
+            "brand:wikipedia": "en:H&M",
+            "name": "H&M",
+            "opening_hours": "Mo-Su 10:00-22:00",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 6185569097,
+        "name": "Mango",
+        "lat": 41.0313028,
+        "lon": 28.9760361,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "name": "Mango",
+            "shop": "clothes",
+            "wheelchair": "limited"
+        }
+    },
+    {
+        "osm_id": 6185569107,
+        "name": "Mavi",
+        "lat": 41.0314685,
+        "lon": 28.9760943,
+        "tags": {
+            "addr:housenumber": "189A",
+            "addr:street": "\u0130stiklal Caddesi",
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "check_date": "2024-11-15",
+            "name": "Mavi",
+            "shop": "clothes",
+            "wheelchair": "limited"
+        }
+    },
+    {
+        "osm_id": 6383694895,
+        "name": "Mavi",
+        "lat": 40.9791016,
+        "lon": 28.8741482,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 6524678113,
+        "name": "Mavi",
+        "lat": 40.9903222,
+        "lon": 29.0234327,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 6766376335,
+        "name": "Mango",
+        "lat": 41.0622683,
+        "lon": 28.8068551,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "level": "1",
+            "name": "Mango",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 7028177985,
+        "name": "Zara",
+        "lat": 41.1098948,
+        "lon": 29.0304918,
+        "tags": {
+            "addr:street": "\u0130stinye Park",
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "brand:wikipedia": "en:Zara (retailer)",
+            "name": "Zara",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9181763148,
+        "name": "Mavi",
+        "lat": 40.9261389,
+        "lon": 29.1241317,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9362676831,
+        "name": "H&M",
+        "lat": 41.00109,
+        "lon": 29.0544731,
+        "tags": {
+            "brand": "H&M",
+            "brand:wikidata": "Q188326",
+            "brand:wikipedia": "en:H&M",
+            "name": "H&M",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9455343433,
+        "name": "Mavi",
+        "lat": 40.9799156,
+        "lon": 28.721987,
+        "tags": {
+            "branch": "Rodrigo",
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9490592461,
+        "name": "Zara",
+        "lat": 41.014596,
+        "lon": 28.9448588,
+        "tags": {
+            "addr:city": "Istanbul",
+            "addr:district": "Fatih",
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "brand:wikipedia": "en:Zara (retailer)",
+            "level": "0",
+            "name": "Zara",
+            "shop": "clothes",
+            "website": "https://www.zara.com/tr/"
+        }
+    },
+    {
+        "osm_id": 9490592463,
+        "name": "Mango",
+        "lat": 41.0146913,
+        "lon": 28.9452291,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Fatih",
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "brand:wikipedia": "en:Mango (retailer)",
+            "level": "0",
+            "name": "Mango",
+            "shop": "clothes",
+            "website": "https://shop.mango.com/tr"
+        }
+    },
+    {
+        "osm_id": 9490592470,
+        "name": "Stradivarius",
+        "lat": 41.0144996,
+        "lon": 28.944815,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Fatih",
+            "brand": "Stradivarius",
+            "brand:wikidata": "Q3322945",
+            "brand:wikipedia": "en:Stradivarius (clothing brand)",
+            "level": "0",
+            "name": "Stradivarius",
+            "shop": "clothes",
+            "website": "https://www.stradivarius.com/tr/"
+        }
+    },
+    {
+        "osm_id": 9490592474,
+        "name": "Mavi",
+        "lat": 41.0146755,
+        "lon": 28.9451151,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "level": "2",
+            "name": "Mavi",
+            "shop": "clothes",
+            "website": "https://www.mavi.com/"
+        }
+    },
+    {
+        "osm_id": 9498224970,
+        "name": "Deichmann",
+        "lat": 40.981996,
+        "lon": 29.1321004,
+        "tags": {
+            "brand": "Deichmann",
+            "brand:wikidata": "Q664543",
+            "brand:wikipedia": "en:Deichmann SE",
+            "level": "0",
+            "name": "Deichmann",
+            "shop": "shoes"
+        }
+    },
+    {
+        "osm_id": 9498224984,
+        "name": "Mavi",
+        "lat": 40.9819861,
+        "lon": 29.1317481,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "brand:wikipedia": "en:Mavi Jeans",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9907143639,
+        "name": "Mavi",
+        "lat": 41.0088397,
+        "lon": 29.2136673,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9916885908,
+        "name": "Zaraca Giyim",
+        "lat": 41.1052923,
+        "lon": 28.8633253,
+        "tags": {
+            "name": "Zaraca Giyim",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 9950497021,
+        "name": "Mango",
+        "lat": 41.0511059,
+        "lon": 28.9929059,
+        "tags": {
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "name": "Mango",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 10884632105,
+        "name": "Zara",
+        "lat": 40.8842981,
+        "lon": 29.207214,
+        "tags": {
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "name": "Zara",
+            "name:en": "Zara",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 11389608391,
+        "name": "Mavi",
+        "lat": 40.9890389,
+        "lon": 29.0288999,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "check_date": "2023-12-02",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 11577260839,
+        "name": "Mavi",
+        "lat": 41.0043679,
+        "lon": 28.6883573,
+        "tags": {
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 12055675519,
+        "name": "Mavi",
+        "lat": 41.0248579,
+        "lon": 29.0870258,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "check_date": "2024-07-15",
+            "name": "Mavi",
+            "name:tr": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 12085705969,
+        "name": "Mango",
+        "lat": 41.0311507,
+        "lon": 28.9759617,
+        "tags": {
+            "name": "Mango",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 12146456741,
+        "name": "Zara",
+        "lat": 41.0634133,
+        "lon": 28.992878,
+        "tags": {
+            "addr:street": "Aytekin Kotil Caddesi",
+            "brand": "Zara",
+            "brand:wikidata": "Q147662",
+            "name": "Zara",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 12347693512,
+        "name": "Flower",
+        "lat": 41.0325642,
+        "lon": 28.9765609,
+        "tags": {
+            "addr:housenumber": "167B",
+            "addr:street": "\u0130stiklal Caddesi",
+            "check_date": "2024-11-15",
+            "name": "Flower",
+            "shop": "shoes"
+        }
+    },
+    {
+        "osm_id": 12777057523,
+        "name": "Mavi",
+        "lat": 40.8928092,
+        "lon": 29.2310487,
+        "tags": {
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "name": "Mavi",
+            "shop": "clothes"
+        }
+    },
+    {
+        "osm_id": 12812282538,
+        "name": "Deichmann",
+        "lat": 41.0685455,
+        "lon": 28.9921193,
+        "tags": {
+            "brand": "Deichmann",
+            "brand:wikidata": "Q664543",
+            "level": "0",
+            "name": "Deichmann",
+            "shop": "shoes"
+        }
+    },
+    {
+        "osm_id": 13059161167,
+        "name": "Mavi",
+        "lat": 40.9977592,
+        "lon": 29.0990618,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Ata\u015fehir",
+            "addr:housenumber": "10",
+            "addr:neighbourhood": "Barbaros Mahallesi",
+            "addr:postcode": "34746",
+            "addr:street": "K\u0131z\u0131l Begonya Soka\u011f\u0131",
+            "brand": "Mavi",
+            "brand:wikidata": "Q1911924",
+            "name": "Mavi",
+            "opening_hours": "10:00- 22:00",
+            "shop": "clothes",
+            "website": "https://www.mavi.com"
+        }
+    },
+    {
+        "osm_id": 13249740512,
+        "name": "Mango",
+        "lat": 40.9796492,
+        "lon": 29.0980892,
+        "tags": {
+            "addr:city": "\u0130stanbul",
+            "addr:district": "Ata\u015fehir",
+            "addr:neighbourhood": "\u0130\u00e7erenk\u00f6y Mahallesi",
+            "addr:postcode": "34752",
+            "brand": "Mango",
+            "brand:wikidata": "Q136503",
+            "name": "Mango",
+            "opening_hours": "10:00-22:00",
+            "shop": "clothes"
+        }
+    }
+]

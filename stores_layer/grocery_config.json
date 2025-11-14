@@ -1,0 +1,11 @@
+{
+    "model_type": "grocery",
+    "description": "Configuration to fetch major Turkish grocery markets from OpenStreetMap via Overpass API.",
+    "search_criteria": {
+        "bbox": [28.5, 40.8, 29.5, 41.2],
+        "tags": [
+            { "shop": "supermarket", "name~": "Migros|CarrefourSA|Şok|BİM|A101|Macrocenter|File|Onur|Ambar Gross" },
+            { "shop": "convenience", "name~": "OK|Bin" }
+        ]
+    }
+}
