@@ -1,0 +1,227 @@
+[
+  {
+    "station": "Söğütlüçeşme",
+    "lat": 40.991442,
+    "long": 29.037863
+  },
+  {
+    "station": "Fikirtepe",
+    "lat": 40.993656,
+    "long": 29.047085
+  },
+  {
+    "station": "Uzunçayır",
+    "lat": 40.998883,
+    "long": 29.056412
+  },
+  {
+    "station": "Acıbadem",
+    "lat": 41.015031,
+    "long": 29.05657
+  },
+  {
+    "station": "Altunizade",
+    "lat": 41.021126,
+    "long": 29.048928
+  },
+  {
+    "station": "Burhaniye",
+    "lat": 41.031934,
+    "long": 29.046852
+  },
+  {
+    "station": "Boğaziçi Köprüsü",
+    "lat": 41.03675,
+    "long": 29.043541
+  },
+  {
+    "station": "Zincirlikuyu",
+    "lat": 41.067505,
+    "long": 29.013945
+  },
+  {
+    "station": "Mecidiyeköy",
+    "lat": 41.066822,
+    "long": 28.992503
+  },
+  {
+    "station": "Çağlayan",
+    "lat": 41.06732,
+    "long": 28.981552
+  },
+  {
+    "station": "Okmeydanı Hastane",
+    "lat": 41.067358,
+    "long": 28.975802
+  },
+  {
+    "station": "Darülaceze-Perpa",
+    "lat": 41.063086,
+    "long": 28.96834
+  },
+  {
+    "station": "Okmeydanı",
+    "lat": 41.056704,
+    "long": 28.961473
+  },
+  {
+    "station": "Halıcıoğlu",
+    "lat": 41.048658,
+    "long": 28.946185
+  },
+  {
+    "station": "Ayvansaray-Eyüp",
+    "lat": 41.038476,
+    "long": 28.937238
+  },
+  {
+    "station": "Edirnekapı",
+    "lat": 41.032933,
+    "long": 28.928614
+  },
+  {
+    "station": "Adnan Menderes Bulvarı",
+    "lat": 41.030035,
+    "long": 28.924704
+  },
+  {
+    "station": "Bayrampaşa-Maltepe",
+    "lat": 41.023933,
+    "long": 28.921484
+  },
+  {
+    "station": "Topkapı",
+    "lat": 41.020432,
+    "long": 28.917463
+  },
+  {
+    "station": "Cevizlibağ",
+    "lat": 41.016555,
+    "long": 28.911123
+  },
+  {
+    "station": "Merter",
+    "lat": 41.007522,
+    "long": 28.897266
+  },
+  {
+    "station": "Zeytinburnu",
+    "lat": 41.003521,
+    "long": 28.891227
+  },
+  {
+    "station": "İncirli",
+    "lat": 40.997877,
+    "long": 28.872609
+  },
+  {
+    "station": "Bahçelievler",
+    "lat": 40.995186,
+    "long": 28.863941
+  },
+  {
+    "station": "Ataköy-Şirievler",
+    "lat": 40.991741,
+    "long": 28.845778
+  },
+  {
+    "station": "Yenibosna",
+    "lat": 40.992316,
+    "long": 28.834746
+  },
+  {
+    "station": "Sefaköy",
+    "lat": 40.998818,
+    "long": 28.798906
+  },
+  {
+    "station": "Beşyol",
+    "lat": 40.994992,
+    "long": 28.795078
+  },
+  {
+    "station": "Florya-Bağlar",
+    "lat": 40.987586,
+    "long": 28.790428
+  },
+  {
+    "station": "Cennet Mahallesi",
+    "lat": 40.985346,
+    "long": 28.782645
+  },
+  {
+    "station": "Küçükçekmece",
+    "lat": 40.986372,
+    "long": 28.76942
+  },
+  {
+    "station": "İBB Sosyal Tesisleri",
+    "lat": 40.978088,
+    "long": 28.745463
+  },
+  {
+    "station": "Şükrübey",
+    "lat": 40.980358,
+    "long": 28.731326
+  },
+  {
+    "station": "Avcılar Merk. Ünv. Kamp.",
+    "lat": 40.983601,
+    "long": 28.725913
+  },
+  {
+    "station": "Cihangir Üniversite Mah.",
+    "lat": 40.990706,
+    "long": 28.713657
+  },
+  {
+    "station": "Mustafa Kemal Paşa",
+    "lat": 40.994998,
+    "long": 28.706146
+  },
+  {
+    "station": "Saadetdere Mah.",
+    "lat": 40.999715,
+    "long": 28.693001
+  },
+  {
+    "station": "Haramidere Sanayi",
+    "lat": 41.00423,
+    "long": 28.685371
+  },
+  {
+    "station": "Haramidere",
+    "lat": 41.005981,
+    "long": 28.673016
+  },
+  {
+    "station": "Güzelyurt",
+    "lat": 41.006637,
+    "long": 28.665256
+  },
+  {
+    "station": "Beylikdüzü",
+    "lat": 41.009508,
+    "long": 28.657147
+  },
+  {
+    "station": "Beylikdüzü Belediye",
+    "lat": 41.012418,
+    "long": 28.649437
+  },
+  {
+    "station": "Cumhuriyet Mahallesi",
+    "lat": 41.015463,
+    "long": 28.641471
+  },
+  {
+    "station": "Hadımköy",
+    "lat": 41.019286,
+    "long": 28.631496
+  },
+  {
+    "station": "Tüyap",
+    "lat": 41.022058,
+    "long": 28.623512
+  }
+]

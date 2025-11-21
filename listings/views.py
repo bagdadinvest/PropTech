@@ -21,7 +21,7 @@ logger.setLevel(logging.DEBUG)
 # ============================================================================
 # SIMPLIFIED VIEW CONFIGURATION - Adjust these numbers to control view output
 # ============================================================================
-NUM_LISTINGS = 3  # Number of listings to display
+NUM_LISTINGS = 6  # Number of listings to display
 NUM_CLOSEST_STATIONS = 3  # Number of closest metro stations per listing
 NUM_CLOSEST_GROCERY_STORES = 3  # Number of closest grocery stores
 NUM_CLOSEST_CLOTHING_STORES = 3  # Number of closest clothing stores

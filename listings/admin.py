@@ -1,5 +1,14 @@
 from django.contrib import admin
-from .models import Listing, DisplayConfig, ClosestStoresCache, ListingImage
+from .models import (
+    Listing,
+    DisplayConfig,
+    ClosestStoresCache,
+    ListingImage,
+    ExternalListing,
+    MapGenerationConfig,
+)
+from django import forms
+from django.contrib.gis.geos import Point
 
 
 @admin.register(DisplayConfig)
@@ -18,7 +27,7 @@ class DisplayConfigAdmin(admin.ModelAdmin):
             "description": "These are kept for backward compatibility but mainly used for frontend filtering."
         }),
         ("Transit", {
-            "fields": ("max_metro_stations",)
+            "fields": ("max_metro_stations",)   
         }),
         ("Metadata", {
             "fields": ("created_at", "updated_at"),
@@ -70,12 +79,33 @@ class ListingImageInline(admin.TabularInline):
     ordering = ["order", "created_at"]
 
 
+class ListingAdminForm(forms.ModelForm):
+    coordinates = forms.CharField(
+        max_length=100,
+        required=False,
+        help_text="Enter coordinates as 'latitude, longitude'. If provided, this will override the map location."
+    )
+
+    class Meta:
+        model = Listing
+        fields = '__all__'
+
+
 @admin.register(Listing)
 class ListingAdmin(admin.ModelAdmin):
+    form = ListingAdminForm
     list_display = ("title", "price", "size_sqm", "image_count", "cache_status")
     search_fields = ("title",)
     readonly_fields = ("cache_status", "image_count")
     inlines = [ListingImageInline]
+    fieldsets = (
+        (None, {
+            'fields': ('title', 'price', 'size_sqm', 'image')
+        }),
+        ('Location', {
+            'fields': ('location', 'coordinates'),
+        }),
+    )
     
     def image_count(self, obj):
         count = obj.images.count()
@@ -93,6 +123,19 @@ class ListingAdmin(admin.ModelAdmin):
         except:
             return "⚠ Not cached"
     cache_status.short_description = "Cache Status"
+
+    def save_model(self, request, obj, form, change):
+        coordinates = form.cleaned_data.get('coordinates')
+        if coordinates:
+            try:
+                lat_str, lon_str = coordinates.split(',')
+                lat = float(lat_str.strip())
+                lon = float(lon_str.strip())
+                obj.location = Point(lon, lat, srid=4326)
+            except (ValueError, TypeError):
+                # Silently ignore malformed coordinates
+                pass
+        super().save_model(request, obj, form, change)
 
 
 @admin.register(ListingImage)
@@ -135,3 +178,34 @@ class ListingImageAdmin(admin.ModelAdmin):
     image_preview_large.short_description = "Image Preview"
 
 
+
+@admin.register(ExternalListing)
+class ExternalListingAdmin(admin.ModelAdmin):
+    list_display = ("source", "external_id", "title", "price", "city", "state", "fetched_at")
+    list_filter = ("source", "city", "state", "fetched_at")
+    search_fields = ("external_id", "title", "city", "state")
+    readonly_fields = ("fetched_at", "updated_at")
+    fieldsets = (
+        (None, {"fields": ("source", "external_id", "title", "price", "deal_type")}),
+        ("Location", {"fields": ("lat", "lng", "location", "city", "state")}),
+        ("Links", {"fields": ("url", "original_url")}),
+        ("Payload", {"fields": ("payload",)}),
+        ("Timestamps", {"fields": ("fetched_at", "updated_at"), "classes": ("collapse",)}),
+    )
+
+
+@admin.register(MapGenerationConfig)
+class MapGenerationConfigAdmin(admin.ModelAdmin):
+    fieldsets = (
+        ("Layers", {"fields": ("enable_metro", "enable_metrobus", "enable_bus", "enable_grocery", "enable_clothing", "enable_pharmacy", "enable_minibus", "enable_malls", "enable_parks", "enable_taxi", "enable_bicycle")}),
+        ("Radii (meters)", {"fields": ("radius_metro", "radius_metrobus", "radius_bus", "radius_grocery", "radius_clothing", "radius_pharmacy", "radius_minibus", "radius_malls", "radius_parks", "radius_taxi", "radius_bicycle")}),
+        ("Max Counts", {"fields": ("max_metro", "max_metrobus", "max_bus", "max_grocery", "max_clothing", "max_pharmacy", "max_minibus", "max_malls", "max_parks", "max_taxi", "max_bicycle")}),
+        ("Meta", {"fields": ("updated_at",), "classes": ("collapse",)}),
+    )
+    readonly_fields = ("updated_at",)
+    
+    def has_add_permission(self, request):
+        return self.model.objects.count() == 0
+    
+    def has_delete_permission(self, request, obj=None):
+        return False

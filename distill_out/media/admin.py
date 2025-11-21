@@ -1,5 +1,8 @@
 from django.contrib import admin
+from django.contrib.gis.geos import Point
+
 from .models import Listing, DisplayConfig, ClosestStoresCache, ListingImage
+from .forms import ListingAdminForm
 
 
 @admin.register(DisplayConfig)
@@ -76,6 +79,24 @@ class ListingAdmin(admin.ModelAdmin):
     search_fields = ("title",)
     readonly_fields = ("cache_status", "image_count")
     inlines = [ListingImageInline]
+    form = ListingAdminForm
+    fieldsets = (
+        ("Basic Info", {
+            'fields': ('title', 'price', 'size_sqm', 'image')
+        }),
+        ('Location', {
+            'fields': ('latitude', 'longitude'),
+            'description': ("Enter coordinates only. The pinpoint map is disabled for now."),
+        }),
+        ("Media", {
+            'fields': ('bulk_images',),
+            'description': ("Upload multiple gallery images at once."),
+        }),
+        ("Status", {
+            'fields': ('image_count', 'cache_status'),
+            'classes': ('collapse',)
+        }),
+    )
     
     def image_count(self, obj):
         count = obj.images.count()
@@ -93,6 +114,35 @@ class ListingAdmin(admin.ModelAdmin):
         except:
             return "⚠ Not cached"
     cache_status.short_description = "Cache Status"
+
+    def save_model(self, request, obj, form, change):
+        # Build location from provided coordinates before first save
+        lat = form.cleaned_data.get('latitude')
+        lon = form.cleaned_data.get('longitude')
+        if lat is not None and lon is not None:
+            obj.location = Point(lon, lat, srid=4326)
+
+        super().save_model(request, obj, form, change)
+
+        # Handle bulk gallery image uploads after the instance has a PK
+        files = request.FILES.getlist('bulk_images')
+        if files:
+            # Determine starting order
+            existing_count = obj.images.count()
+            for idx, f in enumerate(files, start=1):
+                ListingImage.objects.create(
+                    listing=obj,
+                    image=f,
+                    order=existing_count + idx,
+                    is_primary=(existing_count == 0 and idx == 1),
+                    title="",
+                )
+
+    # Ensure admin form always uses multipart encoding for bulk uploads
+    def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
+        extra_context = extra_context or {}
+        extra_context['has_file_field'] = True
+        return super().changeform_view(request, object_id, form_url, extra_context)
 
 
 @admin.register(ListingImage)
@@ -133,5 +183,3 @@ class ListingImageAdmin(admin.ModelAdmin):
         return "No image"
     image_preview_large.allow_tags = True
     image_preview_large.short_description = "Image Preview"
-
-

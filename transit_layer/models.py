@@ -42,3 +42,17 @@ class MetrobusStation(models.Model):
 
     def __str__(self) -> str:  # pragma: no cover
         return self.name
+
+
+class TaxiStand(models.Model):
+    name = models.CharField(max_length=255)
+    location = models.PointField(srid=4326, geography=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self) -> str:  # pragma: no cover
+        return self.name

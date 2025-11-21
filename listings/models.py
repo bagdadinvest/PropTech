@@ -223,3 +223,143 @@ class ClosestStoresCache(models.Model):
     def __str__(self) -> str:  # pragma: no cover
         return f"Cache for Listing {self.listing.id}: {len(self.closest_grocery_ids)} grocery, {len(self.closest_clothing_ids)} clothing"
 
+
+class ExternalListing(models.Model):
+    """
+    Snapshot of listings as they come from external APIs (source-of-truth mirror).
+
+    Purpose:
+    - Persist raw fields for longitudinal analysis (trends, pricing, demand)
+    - Decouple external schema from internal display models
+    - Provide auditable payloads and reproducible enrichment
+    """
+
+    source = models.CharField(
+        max_length=50,
+        default="coralcity",
+        help_text="External data source key (e.g., 'coralcity')",
+    )
+    external_id = models.CharField(
+        max_length=64,
+        db_index=True,
+        help_text="Identifier from the external system",
+    )
+
+    # As-is fields from the external API
+    title = models.CharField(max_length=255, blank=True)
+    price = models.BigIntegerField(null=True, blank=True)
+    deal_type = models.CharField(max_length=32, blank=True, help_text="rent|sale or vendor-specific")
+    city = models.CharField(max_length=64, blank=True)
+    state = models.CharField(max_length=64, blank=True)
+    url = models.URLField(blank=True)
+    original_url = models.URLField(blank=True)
+
+    # Coordinates as provided + spatial point for geospatial queries
+    lat = models.FloatField()
+    lng = models.FloatField()
+    location = models.PointField(srid=4326, geography=True)
+
+    # Raw payload for traceability/audits and future reprocessing
+    payload = models.JSONField(default=dict, blank=True)
+
+    # Aggregated nearest distances by layer (in meters), e.g.:
+    # {
+    #   "metro_m": 340.2, "metrobus_m": 1200.0, "bus_m": 45.3,
+    #   "grocery_m": 210.5, "clothing_m": 820.0, "malls_m": 1300.0,
+    #   "parks_m": 600.0, "taxi_m": 480.0, "minibus_m": 150.0, "bicycle_m": 90.0
+    # }
+    nearest_distances_m = models.JSONField(default=dict, blank=True)
+
+    fetched_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "External Listing"
+        verbose_name_plural = "External Listings"
+        constraints = [
+            models.UniqueConstraint(fields=["source", "external_id"], name="extlisting_unique_source_external_id"),
+        ]
+        indexes = [
+            models.Index(fields=["source", "external_id"]),
+            models.Index(fields=["fetched_at"]),
+            models.Index(fields=["updated_at"]),
+        ]
+
+    def __str__(self) -> str:  # pragma: no cover
+        return f"{self.source}:{self.external_id} - {self.title[:40] if self.title else ''}"
+
+    def save(self, *args, **kwargs):
+        # Ensure location is synced from lat/lng
+        if self.lat is not None and self.lng is not None:
+            from django.contrib.gis.geos import Point
+
+            self.location = Point(float(self.lng), float(self.lat), srid=4326)
+        super().save(*args, **kwargs)
+
+
+class MapGenerationConfig(models.Model):
+    """
+    Centralized, admin-editable configuration for per-listing map generation.
+    Toggle layers, set search radii and max counts without touching code.
+    """
+
+    # Toggles
+    enable_metro = models.BooleanField(default=True)
+    enable_metrobus = models.BooleanField(default=True)
+    enable_bus = models.BooleanField(default=False)
+    enable_grocery = models.BooleanField(default=True)
+    enable_clothing = models.BooleanField(default=True)
+    enable_pharmacy = models.BooleanField(default=False)
+    enable_minibus = models.BooleanField(default=True)
+    enable_malls = models.BooleanField(default=True)
+    enable_parks = models.BooleanField(default=True)
+    enable_taxi = models.BooleanField(default=False)
+    enable_bicycle = models.BooleanField(default=False)
+
+    # Radii (meters)
+    radius_metro = models.PositiveIntegerField(default=1500)
+    radius_metrobus = models.PositiveIntegerField(default=2000)
+    radius_bus = models.PositiveIntegerField(default=600)
+    radius_grocery = models.PositiveIntegerField(default=600)
+    radius_clothing = models.PositiveIntegerField(default=1200)
+    radius_pharmacy = models.PositiveIntegerField(default=600)
+    radius_minibus = models.PositiveIntegerField(default=2500)
+    radius_malls = models.PositiveIntegerField(default=2000)
+    radius_parks = models.PositiveIntegerField(default=1500)
+    radius_taxi = models.PositiveIntegerField(default=800)
+    radius_bicycle = models.PositiveIntegerField(default=2500)
+
+    # Max counts per type
+    max_metro = models.PositiveIntegerField(default=6)
+    max_metrobus = models.PositiveIntegerField(default=6)
+    max_bus = models.PositiveIntegerField(default=8)
+    max_grocery = models.PositiveIntegerField(default=6)
+    max_clothing = models.PositiveIntegerField(default=6)
+    max_pharmacy = models.PositiveIntegerField(default=6)
+    max_minibus = models.PositiveIntegerField(default=10)
+    max_malls = models.PositiveIntegerField(default=6)
+    max_parks = models.PositiveIntegerField(default=8)
+    max_taxi = models.PositiveIntegerField(default=10)
+    max_bicycle = models.PositiveIntegerField(default=10)
+
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Map Generation Config"
+        verbose_name_plural = "Map Generation Config"
+
+    def __str__(self) -> str:  # pragma: no cover
+        return "Map Generation Settings"
+
+    def save(self, *args, **kwargs):
+        # singleton
+        self.pk = 1
+        super().save(*args, **kwargs)
+
+    def delete(self, *args, **kwargs):  # pragma: no cover
+        pass
+
+    @classmethod
+    def get_config(cls):
+        obj, _ = cls.objects.get_or_create(pk=1)
+        return obj

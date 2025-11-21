@@ -56,3 +56,17 @@ class Clothing(Store):
     class Meta:
         verbose_name = "Clothing Store"
         verbose_name_plural = "Clothing Stores"
+
+
+# 4. Concrete Model: Malls
+class Mall(Store):
+    class Meta:
+        verbose_name = "Mall"
+        verbose_name_plural = "Malls"
+
+
+# 5. Concrete Model: Parks
+class Park(Store):
+    class Meta:
+        verbose_name = "Park"
+        verbose_name_plural = "Parks"
